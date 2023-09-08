@@ -38,6 +38,11 @@ public class WordManager {
 			if(menu == 1) {
 				wordCRUD.listAll();
 			}
+			if(menu == 5) { //update
+				wordCRUD.updateItem();
+			}
+			if(menu == 6) { //delete
+			}
 		}
 	}
 
