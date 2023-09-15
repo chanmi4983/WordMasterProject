@@ -2,7 +2,9 @@ package com.mycom.word;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -134,12 +136,27 @@ public class WordCRUD implements ICRUD{
 			count++;
 			}
 			br.close();
-			System.out.println("==> " + count + "개 로당 완료!!!");
+			System.out.println("==> " + count + "개 로딩 완료!!!");
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public void saveFile() { //save data
+		try {
+			PrintWriter pr = new PrintWriter(new FileWriter(fname));
+			for(Word one : list) {
+				pr.write(one.toFileString()+ "\n");
+			}
+			pr.close();
+			System.out.println("==> 데이터 저장 완료!!!");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
 
