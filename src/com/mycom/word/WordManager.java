@@ -39,6 +39,12 @@ public class WordManager {
 			if(menu == 1) {
 				wordCRUD.listAll();
 			}
+			if(menu == 2) {
+				wordCRUD.searchLevel();
+			}
+			if(menu == 3) {
+				wordCRUD.searchWord();
+			}
 			if(menu == 5) { //update
 				wordCRUD.updateItem();
 			}
