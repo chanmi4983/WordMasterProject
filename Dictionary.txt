@@ -18,3 +18,4 @@
 2|eye-opener|눈이 휘둥그레질 만한 사건, 놀라운 경험
 1|graceful|우아한
 2|seagull|갈매
+1|love|사랑
